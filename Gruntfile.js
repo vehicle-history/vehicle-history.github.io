@@ -94,4 +94,5 @@ module.exports = function (grunt) {
   grunt.loadNpmTasks('grunt-contrib-watch');
 
   grunt.registerTask('default', ['copy', 'uglify', 'exec:serve']);
+  grunt.registerTask('build', ['copy', 'uglify', 'exec:build']);
 };
