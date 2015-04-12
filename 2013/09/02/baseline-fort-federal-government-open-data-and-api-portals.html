@@ -1,0 +1,165 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <title>vehicle-history API documentation</title>
+  <link rel="stylesheet" href="/static/css/normalize.css">
+  <link rel="stylesheet" href="/static/css/style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--[if lt IE 9]>
+  <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+
+  <!--[if IE]>
+  <link rel="stylesheet" href="static/css/for-ie-only.css">
+  <![endif]-->
+</head>
+<body id="blog">
+
+  <header class="header cf" role="banner">
+      <header>
+<a href="https://github.com/vehicle-history/dev-hub"><img style="position: absolute; top: 0; right: 0; border: 0; z-index: 1050;" src="https://s3.amazonaws.com/github/ribbons/forkme_right_red_aa0000.png" alt="Fork me on GitHub"></a>
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="navbar-inner">
+        <div class="container">
+            <a class="brand" href="index.html">Dev Hub</a>
+            <div class="nav-collapse collapse">
+                <ul class="nav">
+                    <li class="active"><a href="index.html">Home</a></li>
+                    <li><a href="api.html">APIs</a></li>
+                    <li><a href="code.html">Code</a></li>
+                    <li><a href="support.html">Support</a></li>
+                    <li><a href="roadmap.html">Roadmap</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+
+</header>
+
+  </header>
+
+  <div class="wrap">
+    <div class="content">
+    
+    
+    <p>Less than one page</p>
+    
+    
+    
+    <aside>
+    
+<h1 class="page-title"><a href="/developers/index.html">vehicle-history.io <br>API docs</a></h1>
+      <p class="intro">Build your own client using our API.</p>
+    <nav>    
+        <ul>
+          <li><a href="/developers/index.html" class="overview">Overview</a></li>
+          <li><a href="/developers/basics.html" class="basics">API basics</a></li>
+          <li><a href="/developers/console/" class="console">API calls</a></li>
+          <li><a href="/developers/fields.html" class="fields">Field reference</a></li>
+          <li><a href="/developers/contribute.html" class="contribute">Contribute</a></li>
+        </ul>
+    </nav>
+
+    </aside>
+	<section>
+	
+	</section>
+    <section class="main-content" role="main">
+      <h1 id="baseline-for-federal-government-open-data-and-api-portals">Baseline for Federal Government Open Data and API Portals</h1>
+
+<p>08/20/2013</p>
+
+<p><img src="https://s3.amazonaws.com/kinlane-productions/bw-icons/bw-portal.jpg" alt="" width="275" align="right" />
+I have a whole list of projects around open data and APIs in the federal government. Additionally I have numerous other open data and API projects I&#39;d like to tackle across other federal agencies. As I do with other areas of my work, I needed a standardized way to stabilize the datasets and APis I will need for my projects, in the same way any open data and API provider should do for their consumers.</p>
+
+<p>To help support my work, and hopefully the work of others I wanted to create a baseline portal that I could use at any agency for showing what is possible when hanging open datasets and APIs, in a full featured portal. The success of any open data and / or API portal starts with the technical building blocks, like data and APIs, but have a set of business and political building blocks that are essential to their adoption and growth.</p>
+
+<p>I&#39;ve spent the last three years studying the business and politics of APIs. During these three years I&#39;ve looked at almost 10,000 API developer portals, and established a <a href="http://management.apievangelist.com/building-blocks.html">base set of what I consider the building blocks</a> of successful API portals, with a handful in which I consider essential to success. I&#39;ve always wanted a simple API portal template that would reflect this research, and my new <a href="http://kinlane.github.io/dev-hub/">Dev Hub</a> is the first step towards achieving this. </p>
+
+<p><a href="http://kinlane.github.io/dev-hub/">Dev Hub</a> is an early stage prototype, I&#39;ve built to satisfy this need of mine, to deploy gov data. I will polishing this portal and replicating as a single template that can be used for any API and / or open data portal. This portal exists purely as a <a href="https://github.com/">Github</a> repository and runs on <a href="http://pages.github.com/">Github Pages</a>, using a <a href="http://jekyllrb.com/">Jekyll for managing its pages and blog</a>.  Everything else is HTML, CSS, Javascript and JSON, allowing it to be able to run on any server, including other cloud services like Dropbox or Amazon S3.</p>
+
+<p>To start with I&#39;ve included 20 of what I consider essential API building blocks:</p>
+
+<ul>
+<li>Landing Page</li>
+<li>Getting Started</li>
+<li>APIs</li>
+<li>Data</li>
+<li>Interactive Docs</li>
+<li>Code</li>
+<li>Gallery</li>
+<li>Support</li>
+<li>    Self-Service</li>
+<li>        Stack Exchange</li>
+<li>        Quora</li>
+<li>    Direct Support</li>
+<li>        Issue Management</li>
+<li>        Twitter</li>
+<li>        LinkedIn</li>
+<li>        Facebook</li>
+<li>        Google+</li>
+<li>Roadmap</li>
+<li>Changelog</li>
+<li>Blog</li>
+<li>Terms of Use</li>
+<li>Privacy Policy</li>
+<li>Branding Guidelines</li>
+</ul>
+
+<p>Beyond this project running completely using open formats and standards, deployable in easy to stand-up cloud environments like Github, Dropbox and Amazon S3, everything is machine readable by default. The portal starts with a <a href="http://kinlane.github.io/dev-hub/sitemap.json">sitemap.json</a>, which links to any other building blocks of the open data and API portal, including a data.json and api.json which provide programmatic access to all resources included in the site:</p>
+
+<ul>
+<li><a href="http://kinlane.github.io/dev-hub/api.json">data.json</a> - Machine readable JSON file of all data assets using common core metadata for easy access to all data stored in the portal</li>
+<li><a href="http://kinlane.github.io/dev-hub/data.json">api.json</a> - Machine readable JSON, using the Swagger format describing all API resources available within the portal</li>
+</ul>
+
+<p>Next I wanted all essential building blocks of the portal to also be machine readable by default:</p>
+
+<ul>
+<li><a href="http://kinlane.github.io/dev-hub/json/code.json">Code</a> - JSON library of all code available for use when integrating with datasets and APIs</li>
+<li><a href="http://kinlane.github.io/dev-hub/json/gallery.json">Gallery</a> - A JSON gallery of web, mobile apps and visualizations, widgets, excel and other integrations on data and APis</li>
+<li><a href="http://kinlane.github.io/dev-hub/json/support.json">Support</a> - A JSON listing of self-service and direct support channels for the portal</li>
+<li><a href="http://kinlane.github.io/dev-hub/json/roadmap.json">Roadmap</a> - JSON listings of both the future with a roadmap, providing transparency into portal operations</li>
+<li><a href="http://kinlane.github.io/dev-hub/json/changelog.json">Changelog</a> - A JSON listing documenting the past with all changes made to the portal</li>
+<li><a href="http://kinlane.github.io/dev-hub/json/legal.json">Legal</a> - A directory of the legal building blocks of the portal with links to terms of use, privacy and branding guidelines</li>
+</ul>
+
+<p>This project is the product of 3 years of research, and 3 days worth of work. So it is rough. I was able to capture my initial vision in 3 days, but still a lot of work to do. I need to let it simmer a little bit, and round off some of the rough edges and apply some polish. Then the next step is to generate a generic template from it, that will become the baseline for any other portal I derive from this work.</p>
+
+<p>If there is anything you&#39;d like to see in the future, go ahead and use any of the <a href="http://kinlane.github.io/dev-hub/support/">support channels</a> available on the site. Once I get the base template setup, we can use that as a top level project to guide the future of this baseline for open data and API portals. </p>
+
+    </section>
+    
+
+
+
+
+    </div>
+  </div> <!--wrap-->
+
+    <footer class="footer cf" role="contentinfo">
+      <div class="wrap">
+        <footer>
+
+    <hr/>
+
+    <ul class="legal">
+        <li><a href="/developers/legal/terms-of-use.html">Terms of Use</a></li>
+        <li><a href="/developers/legal/privacy-policy.html">Privacy Policy</a></li>
+        <li><a href="/developers/legal/branding-guidelines.html">Branding Guidelines</a></li>
+        <li><a href="/developers/sitemap.html">Sitemap</a></li>
+    </ul>
+
+</footer>
+    
+
+      </div>
+    </footer>
+  <script type="text/javascript" src="/static/js/docs.min.js"></script>
+  <script type="text/javascript" src="/static/js/expandables.js"></script>
+</body>
+</html>
