@@ -12,13 +12,23 @@ module.exports = function (grunt) {
           }
         ]
       },
-      images: {
+      img: {
         files: [
           {
             expand: true,
             cwd: "static/img",
             src: "*.*",
             dest: "vendor/img/"
+          }
+        ]
+      },
+      images: {
+        files: [
+          {
+            expand: true,
+            cwd: "static/images",
+            src: "*.*",
+            dest: "vendor/images/"
           }
         ]
       },
